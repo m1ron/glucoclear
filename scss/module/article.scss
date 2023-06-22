@@ -1,4 +1,16 @@
 .article {
+  h3, .h3 {
+    margin-top: 30px;
+    @include media-breakpoint-up(xl) {
+      margin-top: 60px;
+    }
+  }
+  h4, .h4 {
+    margin-top: 20px;
+    @include media-breakpoint-up(xl) {
+      margin-top: 40px;
+    }
+  }
   p > strong {
     @include media-breakpoint-up(xl) {
       font-size: 22px;
