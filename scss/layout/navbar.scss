@@ -1,0 +1,44 @@
+/* ==========================================================================
+   NAVBAR
+   ========================================================================== */
+.navbar {
+  min-height: 62px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 5;
+  background: $color-navy !important;
+  @include media-breakpoint-up(xl) {
+    min-height: 114px;
+  }
+
+  .container {
+    height: 100%;
+    position: relative;
+  }
+
+  &-brand {
+    padding: 10px;
+    margin: 0;
+    display: block;
+    position: relative;
+    outline: none;
+    @include media-breakpoint-up(xl) {
+      top: -2px;
+    }
+
+    img {
+      display: block;
+      @include user-select;
+      @include media-breakpoint-down(xl) {
+        width: 176px;
+        height: 21px;
+      }
+    }
+  }
+
+  &-centered {
+    .navbar-brand {
+      margin: 0 auto;
+    }
+  }
+}

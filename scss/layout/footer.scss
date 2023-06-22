@@ -1,0 +1,66 @@
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin-top: auto;
+  position: relative;
+  z-index: 1;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: .01em;
+  color: #8c8c8c;
+  background: black;
+  @include media-breakpoint-up(md) {
+    padding-top: 48px;
+    padding-bottom: 100px;
+  }
+
+  .container {
+    @include media-breakpoint-up(xl) {
+      padding: 0 85px;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color $effect;
+    &:hover {color: white;}
+  }
+
+  p {
+    margin-bottom: 18px;
+    &:last-child {margin-bottom: 0;}
+  }
+
+  .nav {
+    --bs-link-color: #8c8c8c;
+    --bs-link-hover-color: white;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(white, .2);
+    margin-bottom: 27px;
+    font-size: 16px;
+    line-height: 22px;
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      text-align: center;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-bottom: 17px;
+      margin-bottom: 26px;
+    }
+
+    &-item {
+      @include media-breakpoint-up(md) {
+        &:first-of-type {margin-left: -14px;}
+        margin-right: 14px;
+      }
+    }
+
+    &-link {
+      padding: 7px 14px;
+    }
+  }
+}

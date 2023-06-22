@@ -1,0 +1,14 @@
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.page-heading {
+  margin: 0 0 40px;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 0;
+    @include media-breakpoint-up(xl) {
+      line-height: 60px;
+    }
+  }
+}
