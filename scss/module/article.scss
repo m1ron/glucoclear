@@ -5,18 +5,30 @@
       margin-top: 60px;
     }
   }
+
   h4, .h4 {
     margin-top: 20px;
     @include media-breakpoint-up(xl) {
       margin-top: 40px;
     }
   }
+
   p > strong {
     @include media-breakpoint-up(xl) {
       font-size: 22px;
     }
   }
+
   > *:last-child {margin-bottom: 0;}
+
+  &.red {
+    color: $color-red;
+    text-decoration: none;
+    &:hover, &:focus {
+      color: black;
+      text-decoration: none;
+    }
+  }
 }
 
 .btn-orange {

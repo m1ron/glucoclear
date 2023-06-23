@@ -1,6 +1,7 @@
 @import 'base/variables',
         'base/breakpoints',
         'base/grid',
+        'base/fonts',
         'base/default',
         'base/form';
 
@@ -8,5 +9,7 @@
         'layout/page',
         'layout/footer';
 
-@import 'module/page-heading',
+@import 'module/index',
+
+        'module/page-heading',
         'module/article';

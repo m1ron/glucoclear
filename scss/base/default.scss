@@ -35,15 +35,6 @@ a {
   text-decoration: underline;
   transition: color $effect;
   &:hover, &:focus {text-decoration: none;}
-
-  &.red {
-    color: $color-red;
-    text-decoration: none;
-    &:hover, &:focus {
-      color: black;
-      text-decoration: none;
-    }
-  }
 }
 
 h1, h2, h3, h4, h5, h6,
