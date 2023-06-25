@@ -3,7 +3,7 @@
   padding-bottom: 28px;
   @include media-breakpoint-up(md) {
     padding-top: 51px;
-    padding-bottom: 23px;
+    padding-bottom: 24px;
   }
 
   .col {
@@ -112,7 +112,6 @@
       }
       @include media-breakpoint-up(lg) {
         height: 355px;
-        margin-left: 8px;
         top: -42px;
       }
     }
