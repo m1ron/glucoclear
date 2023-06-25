@@ -20,7 +20,7 @@
     top: -7px;
     right: -15px;
     z-index: 0;
-    background: url('#{$img}/stick-1-294w.webp') no-repeat center center;
+    background: url('#{$img}/stick-1-mobile.webp') no-repeat center center;
     background-size: contain;
     @include media-breakpoint-up(xss) {
       right: auto;
@@ -33,7 +33,7 @@
       height: 294px;
       margin-left: -196px;
       top: -15px;
-      background-image: url('#{$img}/stick-1-620w.webp');
+      background-image: url('#{$img}/stick-1.webp');
     }
     @include media-breakpoint-up(xxl) {
       width: 310px;
@@ -51,7 +51,7 @@
     position: absolute;
     top: 310px;
     left: 50%;
-    background: url('#{$img}/stick-2-180w.webp') no-repeat center center;
+    background: url('#{$img}/stick-2.webp') no-repeat center center;
     background-size: contain;
     transform: translateX(-50vw);
     @include media-breakpoint-up(xl) {

@@ -75,6 +75,21 @@
       @include media-breakpoint-up(lg) {
         max-width: 500px;
       }
+
+      &.mobile {
+        @include media-breakpoint-up(sm) {
+          display: none;
+          visibility: hidden;
+        }
+      }
+      &.desktop {
+        display: none;
+        visibility: hidden;
+        @include media-breakpoint-up(sm) {
+          display: block;
+          visibility: visible;
+        }
+      }
     }
   }
 
