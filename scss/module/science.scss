@@ -28,6 +28,11 @@
       margin-left: -98px;
       transform: translateX(50vw);
     }
+    @include media-breakpoint-up(sm) {
+      width: 147px;
+      height: 220px;
+      margin-left: -147px;
+    }
     @include media-breakpoint-up(md) {
       width: 196px;
       height: 294px;
@@ -162,18 +167,21 @@
     }
   }
 
-  &__date {
+  &__subheading {
     margin-bottom: 13px !important;
+    font-size: 18px;
+    line-height: 25px;
     font-weight: bold;
     color: $color-red;
     @include media-breakpoint-up(xl) {
       margin-bottom: 12px !important;
       font-size: 18px;
+      line-height: 27px;
     }
   }
 
   &__heading {
-    margin-bottom: 24px;
+    margin-bottom: 24px !important;
     font-size: 26px;
     line-height: 31px;
     font-weight: 800;

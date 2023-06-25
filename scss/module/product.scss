@@ -26,9 +26,13 @@
     }
   }
 
-  &__logo {
-    margin: 0 -5px 42px;
+  &__heading {
+    margin: 0 -5px 36px;
     position: relative;
+    font-size: 26px;
+    line-height: 40px;
+    font-weight: bold;
+    text-align: center;
     @include media-breakpoint-up(sm) {
       margin-right: 0;
       margin-left: 0;
@@ -36,41 +40,35 @@
     @include media-breakpoint-up(xl) {
       margin-bottom: 47px;
       left: -6px;
+      font-size: 30px;
+      line-height: 38px;
     }
 
-    figcaption {
-      margin-bottom: 12px;
-      display: block;
-      font-size: 26px;
-      line-height: 40px;
-      font-weight: bold;
-      text-align: center;
-      @include media-breakpoint-up(xl) {
-        margin-bottom: 20px;
-        font-size: 30px;
-        line-height: 38px;
-      }
-    }
-
-    img {
-      width: 345px;
+    strong {
+      width: 355px;
       max-width: 100%;
-      height: auto;
-      margin: 0 auto;
+      height: 55px;
+      margin: 5px auto 0;
       display: block;
+      overflow: hidden;
+      text-indent: -1000px;
+      background: url('#{$img}/logo.svg') no-repeat center center;
+      background-size: contain;
       @include user-select;
       @include media-breakpoint-up(xl) {
         width: 470px;
+        height: 58px;
+        margin-top: 20px;
       }
     }
   }
 
   &__image {
-    margin: 0 0 32px;
+    margin: 0 0 33px;
     position: relative;
     z-index: 1;
     @include media-breakpoint-up(lg) {
-      margin: 0;
+      margin-bottom: 0;
       left: -15px;
     }
     @include media-breakpoint-up(xl) {
@@ -85,6 +83,9 @@
       position: relative;
       display: block;
       @include user-select;
+      @include media-breakpoint-up(xsm) {
+        max-width: 350px;
+      }
       @include media-breakpoint-up(sm) {
         max-width: 420px;
       }
