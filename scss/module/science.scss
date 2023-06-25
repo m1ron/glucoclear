@@ -1,5 +1,5 @@
 .science {
-  padding-top: 40px;
+  padding-top: 41px;
   padding-bottom: 30px;
   position: relative;
   z-index: 1;
@@ -17,15 +17,15 @@
     width: 98px;
     height: 147px;
     position: absolute;
-    top: -8px;
+    top: -7px;
     right: -15px;
     z-index: 0;
-    background: url('#{$img}/stick-1-mobile.webp') no-repeat center center;
+    background: url('#{$img}/stick-1-294w.webp') no-repeat center center;
     background-size: contain;
     @include media-breakpoint-up(xss) {
       right: auto;
       left: 50%;
-      margin-left: -97px;
+      margin-left: -98px;
       transform: translateX(50vw);
     }
     @include media-breakpoint-up(md) {
@@ -33,7 +33,7 @@
       height: 294px;
       margin-left: -196px;
       top: -15px;
-      background-image: url('#{$img}/stick-1.webp');
+      background-image: url('#{$img}/stick-1-620w.webp');
     }
     @include media-breakpoint-up(xxl) {
       width: 310px;
@@ -51,7 +51,7 @@
     position: absolute;
     top: 310px;
     left: 50%;
-    background: url('#{$img}/stick-2.webp') no-repeat center center;
+    background: url('#{$img}/stick-2-180w.webp') no-repeat center center;
     background-size: contain;
     transform: translateX(-50vw);
     @include media-breakpoint-up(xl) {
@@ -99,7 +99,7 @@
       }
 
       &.mobile {
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(sm) {
           display: none;
           visibility: hidden;
         }
@@ -107,7 +107,7 @@
       &.desktop {
         display: none;
         visibility: hidden;
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(sm) {
           display: block;
           visibility: visible;
         }
@@ -201,7 +201,7 @@
   &__accent {
     padding: 12px;
     border-radius: 4px;
-    margin-bottom: 13px !important;
+    margin-bottom: 12px !important;
     position: relative;
     top: -8px;
     background: rgba(#17bd95, .1);
