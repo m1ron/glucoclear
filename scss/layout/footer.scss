@@ -36,13 +36,13 @@
   }
 
   .nav {
-    --bs-link-color: #8c8c8c;
-    --bs-link-hover-color: white;
-    padding-bottom: 20px;
+    padding: 0 0 20px;
     border-bottom: 1px solid rgba(white, .2);
-    margin-bottom: 27px;
+    margin: 0 0 27px;
+    display: flex;
     font-size: 16px;
     line-height: 22px;
+    list-style: none;
     @include media-breakpoint-down(md) {
       flex-direction: column;
       text-align: center;
@@ -52,15 +52,21 @@
       margin-bottom: 26px;
     }
 
-    &-item {
+    li {
       @include media-breakpoint-up(md) {
         &:first-of-type {margin-left: -14px;}
         margin-right: 14px;
       }
     }
 
-    &-link {
+    a {
       padding: 7px 14px;
+      display: block;
+      color: inherit;
+
+      @media (hover: hover) {
+        &:hover, &:focus {color: white;}
+      }
     }
   }
 }

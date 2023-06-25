@@ -1,3 +1,5 @@
+@import 'base/reset';
+
 @import 'base/variables',
         'base/breakpoints',
         'base/grid',
@@ -5,7 +7,7 @@
         'base/default',
         'base/form';
 
-@import 'layout/navbar',
+@import 'layout/header',
         'layout/page',
         'layout/footer';
 
