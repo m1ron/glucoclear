@@ -44,12 +44,15 @@
   }
 
   &__image {
-    margin: 0 0 -11px;
-    overflow: hidden;
+    margin: 0 -15px -11px;
     position: relative;
     z-index: 1;
-    @include media-breakpoint-down(sm) {
-      left: -3px;
+    @include media-breakpoint-up(xss) {
+      margin-right: 0;
+      margin-left: 0;
+      @include media-breakpoint-down(sm) {
+        left: -3px;
+      }
     }
     @include media-breakpoint-up(lg) {
       margin: 0;
@@ -62,18 +65,20 @@
     }
 
     img {
-      width: 100%;
-      max-width: 330px;
+      width: 330px;
       height: auto;
       margin: 0 auto;
       position: relative;
       display: block;
       @include user-select;
       @include media-breakpoint-up(sm) {
-        max-width: 420px;
+        width: 420px;
       }
       @include media-breakpoint-up(lg) {
-        max-width: 500px;
+        width: 450px;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 500px;
       }
 
       &.mobile {

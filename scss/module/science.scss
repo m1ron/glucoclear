@@ -219,6 +219,7 @@
     position: relative;
     font-size: 13px;
     line-height: normal;
+    word-wrap: break-word;
     color: #878787;
     @include media-breakpoint-up(xl) {
       margin-top: 21px;
