@@ -14,7 +14,8 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px
+  xxl: 1400px,
+  xxxl: 1600px
 ) !default;
 
 // Paths
@@ -26,13 +27,14 @@ $font-primary: 'Nunito Sans', sans-serif;
 $font-secondary: 'Oswald', sans-serif;
 
 // Colors
+$color-black: #222;
 $color-navy: #003f7d;
 $color-pink: #ffede7;
 $color-orange: #ff881a;
 $color-red: #eb5c2b;
+$color-green: #008535;
 
 
-$color-black: #191919;
 $color-quartz: #4b4c51;
 $color-grey: #9499a0;
 $color-blueish: #aeb4bd;
