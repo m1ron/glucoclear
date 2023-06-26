@@ -224,7 +224,7 @@
       font-size: 15px;
       font-style: normal;
       font-weight: 600;
-      color: #17a986;
+      color: $color-green;
       @include media-breakpoint-up(xl) {
         margin-bottom: 13px;
       }

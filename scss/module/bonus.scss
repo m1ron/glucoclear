@@ -28,13 +28,9 @@
 
   &__heading {
     margin-bottom: 30px;
-    font-size: 26px;
-    line-height: 30px;
     text-align: center;
     @include media-breakpoint-up(md) {
       margin-bottom: 55px;
-      font-size: 36px;
-      line-height: 40px;
     }
     @include media-breakpoint-up(lg) {
       margin-bottom: 63px;
@@ -116,10 +112,7 @@
 
     &-image {
       width: 100%;
-      margin: 0 0 7px;
-      @include media-breakpoint-up(lg) {
-        margin-bottom: 13px;
-      }
+      margin: 0 0 13px;
 
       img {
         width: 100%;
@@ -135,7 +128,7 @@
     }
 
     &-title {
-      margin-bottom: 2px;
+      margin-bottom: 9px;
       font-size: 20px;
       line-height: normal;
       font-weight: 800;

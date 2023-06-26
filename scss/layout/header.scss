@@ -33,7 +33,7 @@
   &__brand {
     padding: 10px 0;
     margin: 0;
-    display: block;
+    display: inline-block;
     position: relative;
     outline: none;
     @include media-breakpoint-up(xl) {
@@ -53,9 +53,10 @@
     }
   }
 
-  &-centered {
-    .header__brand {
-      margin: 0 auto;
+  &--centered {
+    text-align: center;
+    @include media-breakpoint-up(xl) {
+      .header__brand {left: auto;}
     }
   }
 }
