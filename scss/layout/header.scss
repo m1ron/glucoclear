@@ -31,9 +31,10 @@
   }
 
   &__brand {
+    width: 176px;
     padding: 10px 0;
     margin: 0;
-    display: inline-block;
+    display: block;
     position: relative;
     outline: none;
     @include media-breakpoint-up(xl) {
@@ -56,7 +57,11 @@
   &--centered {
     text-align: center;
     @include media-breakpoint-up(xl) {
-      .header__brand {left: auto;}
+      .header__brand {
+        margin-right: auto;
+        margin-left: auto;
+        left: auto;
+      }
     }
   }
 }
