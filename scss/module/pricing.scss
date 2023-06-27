@@ -26,19 +26,8 @@
 
     h2 {
       margin-bottom: 0;
-      font-size: 26px;
-      line-height: 30px;
-      font-weight: 800;
       @include media-breakpoint-down(md) {
         br {display: none;}
-      }
-      @include media-breakpoint-up(md) {
-        font-size: 30px;
-        line-height: 36px;
-      }
-      @include media-breakpoint-up(xl) {
-        font-size: 36px;
-        line-height: 40px;
       }
     }
 

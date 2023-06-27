@@ -32,25 +32,12 @@
 
   &__heading {
     margin-bottom: 14px;
-    font-size: 26px;
-    line-height: 29px;
-    font-weight: 800;
     position: relative;
     @include media-breakpoint-down(xl) {
       br {display: none;}
     }
     @include media-breakpoint-up(xl) {
       margin-bottom: 20px;
-      font-size: 36px;
-      line-height: 40px;
-    }
-    @include media-breakpoint-up(xxl) {
-      left: 10px;
-    }
-
-    em {
-      font-style: normal;
-      color: $color-red;
     }
   }
 

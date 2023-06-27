@@ -1,3 +1,2 @@
 # GlucoClear
-
 Website markup

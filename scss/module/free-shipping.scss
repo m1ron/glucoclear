@@ -32,10 +32,6 @@
 
   &__heading {
     margin-bottom: 32px;
-    @include media-breakpoint-down(lg) {
-      font-size: 26px;
-      line-height: 31px;
-    }
     @include media-breakpoint-up(md) {
       margin-bottom: 12px;
     }

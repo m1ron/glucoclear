@@ -35,11 +35,6 @@
     @include media-breakpoint-up(lg) {
       margin-bottom: 63px;
     }
-
-    em {
-      font-style: normal;
-      color: $color-orange;
-    }
   }
 
   &__cards {

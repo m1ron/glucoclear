@@ -1,11 +1,8 @@
 .reviews {
   padding-top: 47px;
   position: relative;
-  @include media-breakpoint-up(md) {
-    padding-top: 51px;
-  }
   @include media-breakpoint-up(xl) {
-    padding-top: 77px;
+    padding-top: 80px;
   }
 
   > .row {
@@ -54,7 +51,7 @@
     text-align: center;
     position: relative;
     @include media-breakpoint-up(xl) {
-      margin-bottom: 76px;
+      margin-bottom: 93px;
     }
     @include media-breakpoint-up(xxl) {
       left: 17px;
@@ -66,25 +63,15 @@
   &__heading {
     max-width: 325px;
     margin: 0 auto;
-    font-size: 26px;
-    line-height: 27px;
-    font-weight: 800;
     position: relative;
     @include media-breakpoint-up(xsm) {
       max-width: 360px;
     }
     @include media-breakpoint-up(xl) {
       max-width: 520px;
-      font-size: 36px;
-      line-height: 50px;
     }
     @include media-breakpoint-up(xxl) {
       left: -22px;
-    }
-
-    em {
-      font-style: normal;
-      color: $color-red;
     }
   }
 
