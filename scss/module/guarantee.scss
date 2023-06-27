@@ -44,7 +44,8 @@
     box-shadow: 0 65px 65px rgba(0, 66, 145, .11);
     @include media-breakpoint-up(lg) {
       max-width: 912px;
-      padding: 82px 75px 50px 235px;
+      min-height: 610px;
+      padding: 81px 75px 50px 235px;
       font-size: 18px;
       line-height: 25px;
       background: white url('#{$img}/guarantee-decal-2.svg') no-repeat center center;

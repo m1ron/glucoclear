@@ -1,0 +1,122 @@
+.faq {
+  padding-top: 26px;
+  padding-bottom: 24px;
+  position: relative;
+  z-index: 1;
+  color: white;
+  @include media-breakpoint-up(md) {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: 90px;
+    padding-bottom: 130px;
+  }
+
+  &::after {
+    @include pseudo;
+    position: absolute;
+    top: 0;
+    right: -15px;
+    bottom: 0;
+    left: -15px;
+    z-index: -1;
+    background: $color-navy;
+    @include media-breakpoint-up(xss) {
+      width: 100vw;
+      right: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__heading {
+    margin-bottom: -3px;
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+    @include media-breakpoint-down(lg) {
+      line-height: 28px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 10px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__list {
+    @include media-breakpoint-up(lg) {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid rgba(white, .2);
+
+    &.active {
+      .faq__description {
+        display: block;
+      }
+      .faq__toggle {
+        transform: scaleY(-1);
+      }
+    }
+  }
+
+  &__header {
+    padding: 22px 60px 23px 0;
+    position: relative;
+    @include media-breakpoint-up(xl) {
+      padding-top: 14px;
+      padding-bottom: 15px;
+    }
+
+    h4 {
+      margin: 0;
+      font-size: 20px;
+      line-height: normal;
+      font-weight: 800;
+      @include media-breakpoint-up(xl) {
+        font-size: 24px;
+        line-height: 40px;
+      }
+    }
+  }
+
+  &__toggle {
+    @include pseudo;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    background: $color-red url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSI4IiBmaWxsPSJub25lIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgZD0ibTEgMSA1LjM1NyA1IDUuMzU3LTUiLz48L3N2Zz4=') no-repeat center 55%;
+    @include media-breakpoint-up(xl) {
+      top: -3px;
+      right: 6px;
+    }
+  }
+
+  &__description {
+    padding-top: 21px;
+    padding-bottom: 21px;
+    border-top: 1px solid white;
+    margin-top: 3px;
+    display: none;
+    @include media-breakpoint-up(xl) {
+      margin-top: 0;
+      padding-top: 28px;
+      padding-bottom: 17px;
+      font-size: 18px;
+      line-height: 25px;;
+    }
+    p:last-of-type {margin-bottom: 0;}
+  }
+}

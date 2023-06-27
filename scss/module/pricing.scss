@@ -1,4 +1,7 @@
 .pricing {
+  position: relative;
+  z-index: 1;
+
   &__header {
     padding: 15px 0 11px;
     margin-bottom: 43px;
@@ -70,6 +73,32 @@
         left: 50%;
         transform: translateX(-50%);
       }
+    }
+  }
+
+  &::after {
+    @include pseudo;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: -15px;
+    bottom: 0;
+    left: -15px;
+    z-index: -1;
+    background: #f1f1f1;
+    @include media-breakpoint-up(xss) {
+      width: 100vw;
+      right: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &--grey {
+    &::after {display: block;}
+    .pricing__header {
+      &::before {border-color: #179f76 transparent transparent transparent;}
+      &::after {background: #179f76;}
     }
   }
 
