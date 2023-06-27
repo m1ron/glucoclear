@@ -9,6 +9,22 @@
     padding-bottom: 60px;
   }
 
+  &::before {
+    @include pseudo;
+    width: 103px;
+    height: 120px;
+    margin-left: -103px;
+    display: none;
+    position: absolute;
+    top: 310px;
+    left: 50%;
+    background: url('#{$img}/stick-2.webp') no-repeat center center;
+    background-size: contain;
+    transform: translateX(50vw) scaleX(-1);
+    @include media-breakpoint-up(xl) {
+      display: block;
+    }
+  }
   &::after {
     @include pseudo;
     position: absolute;
