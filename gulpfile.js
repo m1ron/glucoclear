@@ -6,7 +6,7 @@ var gulp = require('gulp'),
   twig = require('gulp-twig');
 
 gulp.task('scss', function () {
-  return gulp.src('./scss/style.scss')
+  return gulp.src('./scss/*.scss')
     .pipe(sourcemaps.init())
     .pipe(scss({outputStyle: 'compressed'}).on('error', scss.logError))
     .pipe(autoprefixer('last 2 version'))
