@@ -97,7 +97,7 @@
     top: 0;
     right: 10px;
     bottom: 0;
-    background: $color-red url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSI4IiBmaWxsPSJub25lIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgZD0ibTEgMSA1LjM1NyA1IDUuMzU3LTUiLz48L3N2Zz4=') no-repeat center 55%;
+    background: $color-red no-repeat center 55%;
     @include media-breakpoint-up(xl) {
       top: -3px;
       right: 6px;

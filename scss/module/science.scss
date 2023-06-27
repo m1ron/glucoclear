@@ -12,6 +12,11 @@
     padding-bottom: 39px;
   }
 
+  > .row {
+    align-items: center;
+    justify-content: center;
+  }
+
   &::before {
     @include pseudo;
     width: 98px;
