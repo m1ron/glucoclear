@@ -38,6 +38,7 @@
     position: relative;
     outline: none;
     @include media-breakpoint-up(xl) {
+      width: 293px;
       top: 17px;
       left: 70px;
     }
