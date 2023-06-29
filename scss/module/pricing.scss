@@ -3,16 +3,13 @@
   z-index: 1;
 
   &__header {
-    padding: 15px 0 11px;
+    padding: 20px 0;
     margin-bottom: 43px;
     position: relative;
     z-index: 1;
     color: white;
     text-align: center;
     cursor: default;
-    @include media-breakpoint-up(sm) {
-      padding-bottom: 15px;
-    }
     @include media-breakpoint-up(md) {
       padding-top: 30px;
       padding-bottom: 30px;
@@ -28,6 +25,23 @@
       margin-bottom: 0;
       @include media-breakpoint-down(md) {
         br {display: none;}
+      }
+    }
+
+    .countdown {
+      margin: 10px 0 -5px;
+      display: block;
+      font-style: normal;
+      font-size: 26px;
+      line-height: 32px;
+      font-weight: 800;
+      text-align: center;
+      color: $color-orange;
+      @include user-select;
+      @include media-breakpoint-up(xl) {
+        margin: 17px 0 -22px;
+        font-size: 39px;
+        line-height: 40px;
       }
     }
 
@@ -110,7 +124,10 @@
     position: relative;
     z-index: 1;
     color: #232427;
+    text-decoration: none;
     background: white;
+    transition: transform .3s ease;
+    @include user-select;
     @include media-breakpoint-up(md) {
       width: 33.3%;
       max-width: 322px;
@@ -125,6 +142,14 @@
     }
     @include media-breakpoint-up(xl) {
       padding-top: 24px;
+    }
+
+    @media (hover: hover) {
+      &:not(.pricing__entry--disabled) {
+        &:hover, &:focus {
+          transform: scale(1.03);
+        }
+      }
     }
 
     &-6 {
@@ -228,6 +253,23 @@
         }
       }
     }
+
+    &--disabled {
+      color: #232427;
+      .pricing__image img {filter: grayscale(100%);}
+      .pricing__button {
+        border-color: #c6c6c6;
+        color: #a1a1a1;
+        font-size: 18px;
+        line-height: 20px;
+        text-align: center;
+        background: linear-gradient(180deg, #fff 20%, #e1dfd9 100%);
+        &::after {
+          background: linear-gradient(154.92deg, #eaeaea 15.94%, #a8a8a8 83.23%);
+        }
+      }
+      .pricing__cards img {filter: grayscale(100%);}
+    }
   }
 
   &__head {
@@ -299,7 +341,6 @@
     font-size: 14px;
     line-height: 48px;
     font-weight: bold;
-    cursor: default;
     @include media-breakpoint-up(xss) {
       font-size: 15px;
     }
@@ -372,7 +413,6 @@
     font-weight: bold;
     color: white;
     position: relative;
-    cursor: default;
     @include user-select;
     @include media-breakpoint-up(xss) {
       max-width: none;
@@ -465,7 +505,7 @@
     @include media-breakpoint-up(lg) {
       width: 100%;
       height: auto;
-      padding: 22px 14px 24px;
+      padding: 22px 64px 24px 14px;
       margin-top: 17px;
       margin-left: 0;
       font-size: 30px;
@@ -475,7 +515,7 @@
       font-size: 36px;
     }
 
-    &::after {
+    &::after, &::before {
       @include pseudo;
       width: 29px;
       height: 29px;
@@ -493,30 +533,37 @@
         width: 52px;
         height: 52px;
         top: 1px;
-        background-size: 29px 23px, 100% 100%;
+      }
+    }
+    &::after {
+      background: linear-gradient(154.92deg, #001015 15.94%, #223cbc 83.23%);
+    }
+    &::before {
+      z-index: 3;
+      background: no-repeat center center;
+      @include media-breakpoint-up(lg) {
+        background-size: 29px 23px;
       }
     }
 
     &-wrap {
       position: relative;
 
-      .pricing__button {
-        &::before {
-          @include pseudo;
-          width: 26px;
-          height: 29px;
-          position: absolute;
-          right: 2px;
-          bottom: -19px;
-          z-index: 1;
-          background:  no-repeat center center;
-          background-size: contain;
-          @include media-breakpoint-up(lg) {
-            width: 43px;
-            height: 48px;
-            right: -1px;
-            bottom: -24px;
-          }
+      &::before {
+        @include pseudo;
+        width: 26px;
+        height: 29px;
+        position: absolute;
+        right: 2px;
+        bottom: -19px;
+        z-index: 5;
+        background: no-repeat center center;
+        background-size: contain;
+        @include media-breakpoint-up(lg) {
+          width: 43px;
+          height: 48px;
+          right: 0;
+          bottom: -23px;
         }
       }
 

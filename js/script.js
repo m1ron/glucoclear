@@ -1,23 +1,8 @@
 document.addEventListener('DOMContentLoaded', function (event) {
+  initCountdown();
+  initMonth();
   //initForms();
-  //initCountdown();
-  //initGallery();
 });
-
-function initGallery() {
-  var gallery = document.querySelector('.gallery');
-  if (gallery) {
-    var big = gallery.querySelector('.gallery-big');
-    gallery.querySelectorAll('.gallery-small-item').forEach(item => {
-      item.addEventListener('click', event => {
-        event.preventDefault();
-        document.querySelector('.gallery-small-item.active').classList.remove('active');
-        item.classList.add('active');
-        big.dataset.number = item.dataset.number;
-      }, false)
-    })
-  }
-}
 
 function initCountdown() {
   var countdown = document.querySelector('.countdown');
@@ -25,7 +10,7 @@ function initCountdown() {
   if (countdown) {
     var d = new Date(),
       start = d.getTime(),
-      time = 599;
+      time = 1199;
 
     var min = countdown.querySelector('.minutes'),
       sec = countdown.querySelector('.seconds');
@@ -38,15 +23,22 @@ function initCountdown() {
       var secs = parseInt(timeleft % 60);
       secs = ('0' + secs).slice(-2);
       if (timeleft > 0) {
-        min.innerHTML = '<span>' + mins[0] + '</span><span>' + mins[1] + '</span>';
-        sec.innerHTML = '<span>' + secs[0] + '</span><span>' + secs[1] + '</span>';
+        min.innerHTML = mins;
+        sec.innerHTML = secs;
       } else {
-        min.innerHTML = '<span>0</span><span>0</span>';
-        sec.innerHTML = '<span>0</span><span>0</span>';
+        min.innerHTML = '00';
+        sec.innerHTML = '00';
         clearInterval(intervalID);
       }
     }, 1000);
   }
+}
+
+function initMonth() {
+  var m = document.querySelector('.month');
+  const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const d = new Date();
+  m.innerHTML = month[d.getMonth()];
 }
 
 function initForms() {

@@ -16,6 +16,14 @@
     }
   }
 
+  &--blank {
+    padding-top: 0;
+    > .container {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
   &--landing {
     > .container {
       padding-top: 0;
