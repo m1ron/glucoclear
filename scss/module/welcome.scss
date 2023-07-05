@@ -1,9 +1,14 @@
 .welcome {
+  margin-bottom: 60px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 60px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 80px;
+  }
   @include media-breakpoint-up(xl) {
     max-width: 1000px;
-    margin-top: 63px;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 63px auto 93px;
   }
 
   &__image {

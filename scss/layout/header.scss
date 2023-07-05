@@ -2,6 +2,7 @@
    HEADER
    ========================================================================== */
 .header {
+  min-width: 320px;
   min-height: 62px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -58,12 +59,10 @@
 
   &--centered {
     text-align: center;
-    @include media-breakpoint-up(xl) {
-      .header__brand {
-        margin-right: auto;
-        margin-left: auto;
-        left: auto;
-      }
+    .header__brand {
+      margin-right: auto;
+      margin-left: auto;
+      left: auto;
     }
   }
 
