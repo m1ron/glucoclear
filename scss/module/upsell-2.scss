@@ -401,13 +401,14 @@
     text-decoration-thickness: .05em;
     text-underline-offset: .075em;
     @include user-select;
-    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNzkiIGhlaWdodD0iMzAiIGZpbGw9Im5vbmUiPjxwYXRoIGZpbGw9IiMwMEE2N0UiIGQ9Ik0xOTEuNTg2IDEzLjU4NmEyIDIgMCAwIDAgMCAyLjgyOGwxMi43MjggMTIuNzI4YTIgMiAwIDEgMCAyLjgyOC0yLjgyOEwxOTUuODI4IDE1bDExLjMxNC0xMS4zMTRhMiAyIDAgMCAwLTIuODI4LTIuODI4bC0xMi43MjggMTIuNzI4Wk0xOTMgMTdoODUuNXYtNEgxOTN2NFpNODYuOTE0IDE2LjQxNGEyIDIgMCAwIDAgMC0yLjgyOEw3NC4xODYuODU4YTIgMiAwIDEgMC0yLjgyOCAyLjgyOEw4Mi42NzIgMTUgNzEuMzU4IDI2LjMxNGEyIDIgMCAxIDAgMi44MjggMi44MjhsMTIuNzI4LTEyLjcyOFpNMCAxN2g4NS41di00SDB2NFoiLz48L3N2Zz4=') no-repeat center 7px;
+    background-position: center 7px;
+    background-repeat: no-repeat;
     @include media-breakpoint-up(xl) {
       margin-bottom: 17px;
       font-size: 40px;
       line-height: 50px;
       text-align: left;
-      background: none;
+      background: none !important;
     }
 
     input {
@@ -465,7 +466,8 @@
           top: 13px;
           bottom: 0;
           left: 188px;
-          background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNzkiIGhlaWdodD0iMzAiIGZpbGw9Im5vbmUiPjxwYXRoIGZpbGw9IiMwMEE2N0UiIGQ9Ik0xOTEuNTg2IDEzLjU4NmEyIDIgMCAwIDAgMCAyLjgyOGwxMi43MjggMTIuNzI4YTIgMiAwIDEgMCAyLjgyOC0yLjgyOEwxOTUuODI4IDE1bDExLjMxNC0xMS4zMTRhMiAyIDAgMCAwLTIuODI4LTIuODI4bC0xMi43MjggMTIuNzI4Wk0xOTMgMTdoODUuNXYtNEgxOTN2NFpNODYuOTE0IDE2LjQxNGEyIDIgMCAwIDAgMC0yLjgyOEw3NC4xODYuODU4YTIgMiAwIDEgMC0yLjgyOCAyLjgyOEw4Mi42NzIgMTUgNzEuMzU4IDI2LjMxNGEyIDIgMCAxIDAgMi44MjggMi44MjhsMTIuNzI4LTEyLjcyOFpNMCAxN2g4NS41di00SDB2NFoiLz48L3N2Zz4=') no-repeat center right -44px;
+          background-position: center right -44px;
+          background-repeat: no-repeat;
           background-size: auto 100%;
         }
       }

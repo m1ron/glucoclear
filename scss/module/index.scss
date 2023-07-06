@@ -312,4 +312,107 @@
       }
     }
   }
+
+  &--affiliates {
+    @include media-breakpoint-up(md) {
+      padding-top: 47px;
+      padding-bottom: 51px;
+    }
+    &::after {
+      background-color: #1f66ba;
+      background-position: -7px top, 96% bottom, -70px bottom, center -100%;
+      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+      background-size: auto 51px, auto 118px, auto 57px, cover;
+      @include media-breakpoint-up(sm) {
+        background-position: left top, right bottom, -35px bottom, center -100%;
+      }
+      @include media-breakpoint-up(lg) {
+        background-position: left top, right bottom, 0 bottom, center -100%;
+        background-size: auto 70px, auto 170px, auto 80px, cover;
+      }
+      @include media-breakpoint-up(xl) {
+        background-position: left top, right bottom, 0 bottom, center -100%;
+        background-size: auto 70px, auto 314px, auto 122px, cover;
+      }
+    }
+    .index__image {
+      @include media-breakpoint-up(xl) {
+        top: 42px;
+        left: 4px;
+      }
+      img {
+        @include media-breakpoint-up(xl) {
+          width: 550px;
+        }
+      }
+    }
+    .index__content {
+      @include media-breakpoint-up(md) {
+        max-width: none;
+      }
+      @include media-breakpoint-up(lg) {
+        max-width: 450px;
+      }
+      @include media-breakpoint-up(xl) {
+        left: 38px;
+      }
+    }
+    .index__heading {
+      left: 0;
+      font-size: 35px;
+      line-height: 40px;
+      color: white;
+      @include media-breakpoint-up(md) {
+        font-size: 45px;
+        line-height: 50px;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 17px;
+        font-size: 65px;
+        line-height: 69px;
+      }
+      strong {
+        font-weight: inherit;
+        color: #ffc221;
+        span {font-weight: normal;}
+      }
+    }
+    .index__square {
+      padding: 14px 18px;
+      border-radius: 4px;
+      margin-bottom: 17px !important;
+      font-size: 17px;
+      line-height: 22px;
+      font-weight: 600;
+      color: black;
+      background: #79f1d4;
+      @include media-breakpoint-up(md) {
+        padding: 17px 20px;
+        font-size: 17px;
+        line-height: 23px;
+      }
+      @include media-breakpoint-up(xl) {
+        padding: 19px 22px;
+        font-size: 21px;
+        line-height: 29px;
+      }
+    }
+    .index__content {
+      color: white;
+    }
+    .index__subheading {
+      @include media-breakpoint-up(md) {
+        font-size: 35px;
+        line-height: 45px;
+      }
+      @include media-breakpoint-up(xl) {
+        font-size: 45px;
+        line-height: 55px;
+      }
+      strong {
+        font-weight: inherit;
+        color: #ffc221;
+      }
+    }
+  }
 }
