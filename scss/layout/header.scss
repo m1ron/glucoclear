@@ -243,4 +243,8 @@
       }
     }
   }
+
+  &--gradient {
+    background: linear-gradient(270deg, #003f7d -2.63%, #020057 50.37%, #003f7d 103.37%);
+  }
 }
