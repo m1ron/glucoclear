@@ -315,7 +315,7 @@
 
   &--affiliates {
     @include media-breakpoint-up(md) {
-      padding-top: 47px;
+      padding-top: 45px;
       padding-bottom: 51px;
     }
     &::after {
@@ -367,7 +367,7 @@
         line-height: 50px;
       }
       @include media-breakpoint-up(xl) {
-        margin-bottom: 17px;
+        margin-bottom: 18px;
         font-size: 65px;
         line-height: 69px;
       }
@@ -380,7 +380,7 @@
     .index__square {
       padding: 14px 18px;
       border-radius: 4px;
-      margin-bottom: 17px !important;
+      margin-bottom: 18px !important;
       font-size: 17px;
       line-height: 22px;
       font-weight: 600;
@@ -392,7 +392,7 @@
         line-height: 23px;
       }
       @include media-breakpoint-up(xl) {
-        padding: 19px 22px;
+        padding: 18px 24px 19px 20px;
         font-size: 21px;
         line-height: 29px;
       }
@@ -406,6 +406,7 @@
         line-height: 45px;
       }
       @include media-breakpoint-up(xl) {
+        margin-left: -3px;
         font-size: 45px;
         line-height: 55px;
       }

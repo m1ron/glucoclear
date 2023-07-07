@@ -1,0 +1,132 @@
+.demographics {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+  z-index: 1;
+  color: white;
+  @include media-breakpoint-up(xl) {
+    padding-top: 73px;
+    padding-bottom: 63px;
+  }
+
+  &::after {
+    @include pseudo;
+    position: absolute;
+    top: 0;
+    right: -15px;
+    bottom: 0;
+    left: -15px;
+    z-index: -1;
+    background-color: #003f7d;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: cover, auto;
+    @include media-breakpoint-up(xss) {
+      width: 100vw;
+      right: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__content {
+    max-width: 1000px;
+    margin: 0 auto 32px;
+    font-size: 17px;
+    line-height: 26px;
+    color: white;
+    text-align: center;
+
+    p {
+      @include media-breakpoint-up(md) {
+        margin-bottom: 18px;
+      }
+      &:last-of-type {margin-bottom: 0;}
+    }
+  }
+
+  &__heading {
+    margin-bottom: 20px !important;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 800;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 26px !important;
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+
+  &__list {
+    max-width: 740px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    @include media-breakpoint-up(xl) {
+      max-width: 1020px;
+    }
+  }
+
+  &__cell {
+    width: 100%;
+    min-height: 136px;
+    padding: 10px;
+    @include media-breakpoint-up(md) {
+      width: 50%;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 33.3%;
+    }
+  }
+
+  &__space {
+    min-height: 100%;
+    padding: 18px 40px 12px 105px;
+    border-radius: 15px;
+    font-size: 17px;
+    line-height: 23px;
+    color: white;
+    position: relative;
+    background: #1b61a7;
+
+    small {
+      font-size: inherit;
+      line-height: inherit;
+      display: block;
+      @include media-breakpoint-up(xl) {
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+
+    strong {
+      margin-right: -15px;
+      margin-bottom: 6px;
+      display: block;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 800;
+      color: #ffc221;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__icon {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 24px;
+    left: 22px;
+
+    img {
+      width: 71px;
+      height: 71px;
+      display: block;
+      @include user-select;
+    }
+  }
+}

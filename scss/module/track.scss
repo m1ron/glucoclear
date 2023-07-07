@@ -1,0 +1,112 @@
+.track {
+  padding-top: 50px;
+  padding-bottom: 46px;
+  position: relative;
+  z-index: 1;
+
+  .row {
+    align-items: center;
+  }
+
+  &::before {
+    @include pseudo;
+    width: 98px;
+    height: 147px;
+    display: none;
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    z-index: 0;
+    background: url('#{$img}/stick-1-mobile.webp') no-repeat center center;
+    background-size: contain;
+    transform: translateX(50vw);
+    @include media-breakpoint-up(lg) {
+      width: 196px;
+      height: 294px;
+      margin-left: -196px;
+      top: -15px;
+      display: block;
+      background-image: url('#{$img}/stick-1.webp');
+    }
+    @include media-breakpoint-up(xxl) {
+      width: 350px;
+      height: 460px;
+      margin-left: -350px;
+      top: 42px;
+    }
+  }
+  &::after {
+    @include pseudo;
+    position: absolute;
+    top: 0;
+    right: -15px;
+    bottom: 0;
+    left: -15px;
+    z-index: -1;
+    background: #fff1e3 url('#{$img}/track.webp') no-repeat center center;
+    background-size: cover;
+    @include media-breakpoint-up(xss) {
+      width: 100vw;
+      right: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__content {
+    margin-bottom: 20px;
+    position: relative;
+    font-weight: 600;
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 35px;
+      font-size: 26px;
+      line-height: 34px;
+      text-align: left;
+    }
+    @include media-breakpoint-up(lg) {
+      left: 70px;
+    }
+
+    p {
+      @include media-breakpoint-up(md) {
+        margin-bottom: 48px;
+      }
+      &:last-of-type {margin-bottom: 0;}
+    }
+  }
+
+  &__heading {
+    margin-bottom: 0 !important;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    @include media-breakpoint-up(md) {
+      font-size: 34px;
+      line-height: 46px;
+    }
+
+    strong {
+      font-weight: bold;
+      color: #eb5c2b;
+    }
+  }
+
+  &__image {
+    position: relative;
+    @include media-breakpoint-up(md) {
+      left: 26px;
+    }
+
+    img {
+      max-width: 220px;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+      @include user-select;
+      @include media-breakpoint-up(lg) {
+        max-width: 100%;
+      }
+    }
+  }
+}
