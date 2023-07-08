@@ -1,0 +1,51 @@
+.contact-us {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+  z-index: 1;
+  color: white;
+  @include media-breakpoint-up(xl) {
+    padding-top: 64px;
+    padding-bottom: 84px;
+  }
+
+  &::after {
+    @include pseudo;
+    position: absolute;
+    top: 0;
+    right: -15px;
+    bottom: 0;
+    left: -15px;
+    z-index: -1;
+    background-color: $color-navy;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom left, bottom right;
+    @include media-breakpoint-up(xss) {
+      width: 100vw;
+      right: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__content {
+    max-width: 880px;
+    margin: 0 auto;
+    line-height: 23px;
+    text-align: center;
+
+    a {color: #ffc221;}
+    p:last-of-type {margin-bottom: 0;}
+  }
+
+  &__heading {
+    margin-bottom: 20px !important;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 800;
+    @include media-breakpoint-up(md) {
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+}

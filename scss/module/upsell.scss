@@ -159,7 +159,7 @@
     font-size: 33px;
     line-height: 41px;
     text-align: center;
-    color: #003f7d;
+    color: $color-navy;
     @include media-breakpoint-up(lg) {
       margin-bottom: 32px;
       font-size: 38px;
@@ -172,7 +172,7 @@
     font-size: 26px;
     line-height: 30px;
     text-align: center;
-    color: #003f7d;
+    color: $color-navy;
     @include media-breakpoint-up(md) {
       margin-top: 32px;
       margin-bottom: 38px;
@@ -184,7 +184,7 @@
     font-size: 24px;
     line-height: 30px;
     text-align: center;
-    color: #003f7d;
+    color: $color-navy;
     @include media-breakpoint-up(lg) {
       font-size: 35px;
       line-height: 35px;
@@ -193,7 +193,7 @@
 
   .thanks {
     font-weight: 800;
-    color: #003f7d;
+    color: $color-navy;
     text-align: center;
     @include media-breakpoint-up(lg) {
       margin: -25px 0 0;
