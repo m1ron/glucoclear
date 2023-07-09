@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function (event) {
   initCountdown();
   initMonth();
-  //initForms();
+  initAffiliate();
 });
 
 function initCountdown() {
@@ -36,19 +36,28 @@ function initCountdown() {
 
 function initMonth() {
   var m = document.querySelector('.month');
-  const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  const d = new Date();
-  m.innerHTML = month[d.getMonth()];
+  if (m) {
+    const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const d = new Date();
+    m.innerHTML = month[d.getMonth()];
+  }
 }
 
-function initForms() {
-  document.querySelectorAll('.validate').forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      }
-      form.classList.add('was-validated')
-    }, false)
+function initAffiliate() {
+  document.querySelectorAll('.affiliate-form').forEach(form => {
+    var btn = form.querySelector('.form-more');
+    if (btn) {
+      btn.addEventListener('click', event => {
+        event.preventDefault();
+        var more = form.querySelector('.affiliate-form__more');
+        if (more.classList.contains('hidden')) {
+          more.classList.remove('hidden');
+          btn.querySelector('span').innerHTML = 'Hide';
+        } else {
+          more.classList.add('hidden');
+          btn.querySelector('span').innerHTML = 'Show';
+        }
+      }, false);
+    }
   })
 }
