@@ -1,2 +1,45 @@
-.btn {
+.form {
+  &-group {
+    margin-bottom: 24px;
+  }
+
+  &-label {
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+    color: black;
+    display: block;
+  }
+
+  &-control {
+    width: 100%;
+    padding: 15px 14px 13px;
+    border: none;
+    border-radius: 8px;
+    font: 16px/20px $font-primary;
+    color: $color-black;
+    display: block;
+    background: #f4f1f1;
+    outline: none !important;
+    -webkit-appearance: none;
+    &::placeholder { color: black; transition: opacity $effect; @include user-select; }
+    &:focus::placeholder { opacity: 0; }
+    @include media-breakpoint-up(md) {
+      font-size: 14px;
+    }
+  }
+
+  &-select {
+    width: 100%;
+    padding: 15px 14px 13px;
+    border: none;
+    border-radius: 8px;
+    font: 14px/20px $font-primary;
+    color: $color-black;
+    display: block;
+    background: #f4f1f1 url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSI5IiBmaWxsPSJub25lIj48cGF0aCBmaWxsPSIjMDAwIiBkPSJtNy40NjcgOSAuOTAyLS44NjEgNi41NjUtNi4yMzZMMTMuMTI4IDAgNy40NjcgNS4zOCAxLjgwNSAwIDAgMS45MDNsNi41NjQgNi4yMzYuOTAzLjg2MVoiLz48L3N2Zz4=') no-repeat top 20px right 15px;
+    outline: none !important;
+    -webkit-appearance: none;
+  }
 }
