@@ -1,0 +1,126 @@
+.links {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+  z-index: 1;
+  color: white;
+  @include media-breakpoint-up(xl) {
+    padding-top: 92px;
+    padding-bottom: 63px;
+  }
+
+  &::after {
+    @include pseudo;
+    position: absolute;
+    top: 0;
+    right: -15px;
+    bottom: 0;
+    left: -15px;
+    z-index: -1;
+    background-color: $color-navy;
+    @include media-breakpoint-up(xss) {
+      width: 100vw;
+      right: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__content {
+    max-width: 1000px;
+    margin: 0 auto 32px;
+    font-size: 17px;
+    line-height: 26px;
+    color: white;
+    text-align: center;
+
+    p {
+      @include media-breakpoint-up(md) {
+        margin-bottom: 18px;
+      }
+      &:last-of-type {margin-bottom: 0;}
+    }
+  }
+
+  &__heading {
+    margin-bottom: 20px !important;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 800;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 42px !important;
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+
+  &__list {
+    max-width: 740px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    @include media-breakpoint-up(xl) {
+      max-width: 1020px;
+    }
+  }
+
+  &__cell {
+    width: 100%;
+    max-width: 340px;
+    min-height: 136px;
+    padding: 10px;
+    margin: 0 auto;
+    @include media-breakpoint-up(md) {
+      width: 50%;
+      max-width: none;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 33.3%;
+    }
+  }
+
+  &__space {
+    min-height: 100%;
+    padding: 29px 20px 24px 20px;
+    border: 2px solid #ffc221;
+    border-radius: 8px;
+    font-size: 21px;
+    line-height: 27px;
+    color: white;
+    text-align: center;
+    position: relative;
+    background: rgba(white, .1);
+
+    h4 {
+      margin-bottom: 17px;
+      display: block;
+      font-size: 22px;
+      line-height: 28px;
+      font-weight: 800;
+      color: #ffc221;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      color: white;
+    }
+  }
+
+  &__icon {
+    padding: 0;
+    margin: 0 auto 28px;
+
+    img {
+      width: 126px;
+      height: 126px;
+      margin: 0 auto;
+      display: block;
+      @include user-select;
+    }
+  }
+}
