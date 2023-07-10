@@ -1,8 +1,26 @@
 document.addEventListener('DOMContentLoaded', function (event) {
+  initHeader();
   initCountdown();
   initMonth();
   initAffiliate();
 });
+
+function initHeader() {
+  var nav = document.querySelector('.header__nav');
+  if (nav) {
+    document.querySelector('.header__toggle').addEventListener('click', function (event) {
+      event.preventDefault();
+      if (nav.classList.contains('visible')) {
+        setTimeout(function () {
+          nav.classList.remove('visible');
+        }, 25);
+      } else {
+        nav.classList.add('visible');
+      }
+      return false;
+    });
+  }
+}
 
 function initCountdown() {
   var countdown = document.querySelector('.countdown');

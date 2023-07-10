@@ -57,8 +57,8 @@
     }
 
     &.small {
-      top: 20px;
       @include media-breakpoint-up(xl) {
+        top: 20px;
         img {
           width: 265px;
           height: auto;
@@ -68,46 +68,113 @@
   }
 
   &__nav {
+    margin-top: 10px;
+    display: none;
     position: absolute;
-    top: 20px;
-    right: 78px;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: $color-navy;
+    @include media-breakpoint-up(xl) {
+      margin-top: 0;
+      display: block;
+      top: 20px;
+      right: 78px;
+      left: auto;
+      background: none;
+    }
+
+    &.visible {
+      @include media-breakpoint-down(xl) {
+        display: block;
+      }
+    }
 
     ul {
-      padding: 0;
+      padding: 20px 0 30px;
       margin: 0;
       list-style: none;
-      display: flex;
-      align-items: center;
-      font-size: 19px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      @include media-breakpoint-up(xl) {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        font-size: 19px;
+        font-weight: normal;
+        text-align: left;
+      }
 
       li {
-        padding: 0 10px;
+        padding: 5px 0;
+        @include media-breakpoint-up(xl) {
+          padding: 0 10px;
+        }
       }
 
       a {
-        padding: 5px 10px;
+        padding: 10px;
         color: white;
-        display: block;
+        display: inline-block;
         position: relative;
-        top: -3px;
         text-decoration: none;
         white-space: nowrap;
+        @include media-breakpoint-up(xl) {
+          padding: 5px 10px;
+          display: block;
+          top: -3px;
+        }
 
         &.button {
-          padding: 13px 37px 12px;
+          padding: 12px 24px;
           border-radius: 8px;
-          margin: 0 0 0 16px;
-          display: block;
-          font-size: 20px;
-          line-height: 30px;
+          margin: 15px 0 0 0;
+          display: inline-block;
+          font-size: 18px;
+          line-height: 28px;
           font-weight: bold;
-          top: 0;
           color: white;
           text-decoration: none;
           text-align: center;
           background: #008535;
+          @include media-breakpoint-up(xl) {
+            padding: 13px 37px 12px;
+            margin: 0 0 0 16px;
+            display: block;
+            top: 0;
+            font-size: 20px;
+            line-height: 30px;
+          }
         }
       }
+    }
+  }
+
+  &__toggle {
+    width: 32px;
+    height: 32px;
+    margin: auto 0;
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 7px;
+    bottom: 0;
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+
+    &::before {
+      @include pseudo;
+      width: 16px;
+      height: 11px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxMSIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgMHYxLjFoMTZWMEgwWm0wIDQuOTV2MS4xaDE2di0xLjFIMFpNMCA5LjlWMTFoMTZWOS45SDBaIi8+PC9zdmc+') no-repeat center center;
     }
   }
 
