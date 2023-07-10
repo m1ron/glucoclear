@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function (event) {
   initHeader();
+  initFAQ();
   initCountdown();
   initMonth();
   initAffiliate();
@@ -22,9 +23,26 @@ function initHeader() {
   }
 }
 
+function initFAQ() {
+  var faq = document.querySelector('.faq');
+  if (faq) {
+    faq.querySelectorAll('.faq__item').forEach(function (i) {
+      i.querySelector('.faq__toggle').addEventListener('click', function (event) {
+        event.preventDefault();
+        var item = i;
+        if (item.classList.contains('active')) {
+          item.classList.remove('active');
+        } else {
+          item.classList.add('active')
+        }
+        return false;
+      });
+    });
+  }
+}
+
 function initCountdown() {
   var countdown = document.querySelector('.countdown');
-
   if (countdown) {
     var d = new Date(),
       start = d.getTime(),
@@ -55,7 +73,7 @@ function initCountdown() {
 function initMonth() {
   var m = document.querySelector('.month');
   if (m) {
-    const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     const d = new Date();
     m.innerHTML = month[d.getMonth()];
   }
