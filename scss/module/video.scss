@@ -80,14 +80,16 @@
     background: white;
     @include media-breakpoint-up(md) {
       max-width: none;
-      //height: 440px;
+      width: 614px;
+      height: 348px;
     }
     @include media-breakpoint-up(lg) {
-      //height: 520px;
+      width: 950px;
+      height: 537px;
     }
     @include media-breakpoint-up(xl) {
-      width: 1038px;
-      //height: 586px;
+      width: 1062px;
+      height: 600px;
     }
 
     .w-bpb-wrapper, .click-for-sound-btn {
@@ -163,19 +165,19 @@
   }
 
   .video__player.playing {
-    .video__play {
-      display: none;
-    }
-    .video__unmute {
-      display: block;
-    }
+    position: static;
+
+    .video__play {display: none;}
+    .video__unmute {display: block;}
+
     .wistia_responsive_padding {
       width: 100vw !important;
       height: 100vh !important;
-      position: fixed !important;
+      position: absolute !important;
       top: 0;
-      left: 0;
+      left: 50%;
       z-index: 500;
+      transform: translateX(-50%);
 
       .wistia_embed {
         &, & > div, & > div > div {
