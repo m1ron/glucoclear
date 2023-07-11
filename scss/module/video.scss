@@ -1,7 +1,7 @@
 .video {
   padding: 17px 0 34px;
   position: relative;
-  z-index: 1;
+  z-index: 500;
   color: white;
   @include media-breakpoint-up(md) {
     padding-top: 20px;
@@ -72,21 +72,32 @@
   }
 
   &__player {
-    height: 577px;
+    max-width: 364px;
     border: 3px solid #aaa;
     margin: 0 auto;
     position: relative;
     z-index: 2;
     background: white;
     @include media-breakpoint-up(md) {
-      height: 440px;
+      max-width: none;
+      //height: 440px;
     }
     @include media-breakpoint-up(lg) {
-      height: 520px;
+      //height: 520px;
     }
     @include media-breakpoint-up(xl) {
-      max-width: 1020px;
-      height: 586px;
+      width: 1038px;
+      //height: 586px;
+    }
+
+    .w-bpb-wrapper, .click-for-sound-btn {
+      display: none !important;
+    }
+    .wistia_responsive_padding {
+      z-index: 5;
+    }
+    .w-bottom-bar {
+      display: none !important;
     }
   }
 
@@ -97,6 +108,9 @@
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 10;
+    background: rgba(black, .2);
+    cursor: pointer;
 
     &::before {
       width: 271px;
@@ -120,6 +134,63 @@
       @include media-breakpoint-up(xl) {
         width: 457px;
         height: 457px;
+      }
+    }
+  }
+
+  &__unmute {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 501;
+    cursor: pointer;
+  }
+
+  &__mobile {
+    display: block;
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+  &__desktop {
+    display: none;
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+  .video__player.playing {
+    .video__play {
+      display: none;
+    }
+    .video__unmute {
+      display: block;
+    }
+    .wistia_responsive_padding {
+      width: 100vw !important;
+      height: 100vh !important;
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      z-index: 500;
+
+      .wistia_embed {
+        &, & > div, & > div > div {
+          width: 100% !important;
+          height: 100% !important;
+        }
+      }
+
+      .w-video-wrapper {
+        width: 100vw !important;
+        height: 100vh !important;
+
+        video {
+          object-fit: cover !important;
+        }
       }
     }
   }
