@@ -79,6 +79,7 @@
     font-size: 23px;
     line-height: 38px;
     font-weight: 800;
+    color: white;
     background: $color-red;
     @include media-breakpoint-up(md) {
       padding: 10px;
@@ -87,6 +88,7 @@
       margin-bottom: 15px;
       font-size: 32px;
       font-weight: 800;
+      color: white;
     }
   }
 

@@ -74,6 +74,9 @@
         width: 100vw;
         right: 0;
         left: 50%;
+        transform: translateX(-50%) scale(1.001);
+      }
+      @include media-breakpoint-up(md) {
         transform: translateX(-50%);
       }
     }
@@ -93,6 +96,9 @@
       width: 100vw;
       right: 0;
       left: 50%;
+      transform: translateX(-50%) scale(1.001);
+    }
+    @include media-breakpoint-up(md) {
       transform: translateX(-50%);
     }
   }

@@ -1,5 +1,8 @@
 * {
   &, :before, :after {box-sizing: border-box;}
+  .noclick & {
+    @include user-select;
+  }
 }
 
 html {
@@ -16,6 +19,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
   font: 18px/25px $font-primary;
   color: black;
   background: white;

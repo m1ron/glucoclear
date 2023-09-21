@@ -26,6 +26,9 @@
       width: 100vw;
       right: 0;
       left: 50%;
+      transform: translateX(-50%) scale(1.001);
+    }
+    @include media-breakpoint-up(md) {
       transform: translateX(-50%);
     }
   }
@@ -93,6 +96,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    outline: none !important;
 
     &::before {
       @include pseudo;

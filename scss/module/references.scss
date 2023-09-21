@@ -54,10 +54,6 @@
     white-space: nowrap;
     position: relative;
     cursor: default;
-    @include media-breakpoint-up(lg) {
-      max-width: none;
-      left: 40px;
-    }
     @include media-breakpoint-up(xl) {
       font-size: 14px;
       line-height: 18px;

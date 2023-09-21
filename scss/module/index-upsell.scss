@@ -1,0 +1,115 @@
+.index--upsell {
+  @include media-breakpoint-down(md) {
+    padding-bottom: 39px;
+  }
+  @include media-breakpoint-up(md) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &::after {
+      background-position: left -300px top -300px, right -30px bottom, -70px bottom, bottom -300px right -300px;
+      background-size: auto 70px, auto 190px, auto 100px, 80px auto;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: 21px;
+    padding-bottom: 5px;
+  }
+
+  .index {
+    &__image {
+      margin-bottom: 6px;
+      left: 0;
+      @include media-breakpoint-up(md) {
+        margin-top: 0;
+        margin-bottom: 0;
+        top: 0;
+        left: 0;
+      }
+      @include media-breakpoint-up(xl) {
+        padding-right: 8px;
+        overflow: hidden;
+      }
+
+      img {
+        width: 338px;
+        @include media-breakpoint-up(xl) {
+          width: 410px;
+          float: right;
+        }
+      }
+    }
+
+    &__content {
+      margin-right: -5px;
+      font-size: 19px;
+      line-height: 26px;
+      @include media-breakpoint-up(sm) {
+        margin-right: 0;
+      }
+      @include media-breakpoint-up(xl) {
+        font-size: 23px;
+        line-height: 27px;
+        top: -16px;
+        left: -5px;
+      }
+
+      strong {font-weight: 800;color: $color-red;}
+
+      p {
+        margin-bottom: 13px;
+        @include media-breakpoint-up(xl) {
+          margin-bottom: 18px;
+        }
+      }
+    }
+
+    &__heading {
+      margin-bottom: 22px;
+      font-size: 32px;
+      line-height: 35px;
+      font-weight: 800;
+      color: $color-navy;
+      @include media-breakpoint-up(md) {
+        font-size: 40px;
+        line-height: 44px;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 18px;
+        font-size: 50px;
+        line-height: 55px;
+      }
+
+      em {
+        position: relative;
+        white-space: nowrap;
+        color: $color-navy;
+        &::after {
+          @include pseudo;
+          height: 4px;
+          position: absolute;
+          right: 0;
+          bottom: -2px;
+          left: 0;
+          background: linear-gradient(to right, #17bd95, rgba(#17bd95, 0));
+          @include media-breakpoint-up(xl) {
+            bottom: 5px;
+          }
+        }
+      }
+    }
+
+    &__results {
+      margin-bottom: 0 !important;
+      margin-left: -3px;
+      font-size: 20px;
+      font-weight: 900;
+      font-style: italic;
+      line-height: normal;
+      text-align: center;
+      @include media-breakpoint-up(md) {
+        margin-left: 0;
+        text-align: left;
+      }
+    }
+  }
+}

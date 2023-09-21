@@ -401,6 +401,7 @@
     text-decoration-thickness: .05em;
     text-underline-offset: .075em;
     @include user-select;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNzkiIGhlaWdodD0iMzAiIGZpbGw9Im5vbmUiPjxwYXRoIGZpbGw9IiMwMEE2N0UiIGQ9Ik0xOTEuNTg2IDEzLjU4NmEyIDIgMCAwIDAgMCAyLjgyOGwxMi43MjggMTIuNzI4YTIgMiAwIDEgMCAyLjgyOC0yLjgyOEwxOTUuODI4IDE1bDExLjMxNC0xMS4zMTRhMiAyIDAgMCAwLTIuODI4LTIuODI4bC0xMi43MjggMTIuNzI4Wk0xOTMgMTdoODUuNXYtNEgxOTN2NFpNODYuOTE0IDE2LjQxNGEyIDIgMCAwIDAgMC0yLjgyOEw3NC4xODYuODU4YTIgMiAwIDEgMC0yLjgyOCAyLjgyOEw4Mi42NzIgMTUgNzEuMzU4IDI2LjMxNGEyIDIgMCAxIDAgMi44MjggMi44MjhsMTIuNzI4LTEyLjcyOFpNMCAxN2g4NS41di00SDB2NFoiLz48L3N2Zz4=');
     background-position: center 7px;
     background-repeat: no-repeat;
     @include media-breakpoint-up(xl) {
@@ -448,6 +449,8 @@
         left: 0;
         background: url('#{$img}/checkbox.png') no-repeat center center;
         background-size: contain;
+        transform: scale(1);
+        animation: pulsing .8s infinite;
         @include media-breakpoint-up(xl) {
           width: 108px;
           height: 108px;
@@ -466,6 +469,7 @@
           top: 13px;
           bottom: 0;
           left: 188px;
+          background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNzkiIGhlaWdodD0iMzAiIGZpbGw9Im5vbmUiPjxwYXRoIGZpbGw9IiMwMEE2N0UiIGQ9Ik0xOTEuNTg2IDEzLjU4NmEyIDIgMCAwIDAgMCAyLjgyOGwxMi43MjggMTIuNzI4YTIgMiAwIDEgMCAyLjgyOC0yLjgyOEwxOTUuODI4IDE1bDExLjMxNC0xMS4zMTRhMiAyIDAgMCAwLTIuODI4LTIuODI4bC0xMi43MjggMTIuNzI4Wk0xOTMgMTdoODUuNXYtNEgxOTN2NFpNODYuOTE0IDE2LjQxNGEyIDIgMCAwIDAgMC0yLjgyOEw3NC4xODYuODU4YTIgMiAwIDEgMC0yLjgyOCAyLjgyOEw4Mi42NzIgMTUgNzEuMzU4IDI2LjMxNGEyIDIgMCAxIDAgMi44MjggMi44MjhsMTIuNzI4LTEyLjcyOFpNMCAxN2g4NS41di00SDB2NFoiLz48L3N2Zz4=');
           background-position: center right -44px;
           background-repeat: no-repeat;
           background-size: auto 100%;
@@ -506,6 +510,25 @@
         font-size: 35px;
         line-height: 40px;
       }
+    }
+  }
+
+  &-alert {
+    margin: 30px 0 15px;
+    font-size: 16px;
+    line-height: normal;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    span {
+      padding: 5px 10px;
+      border-radius: 3px;
+      display: inline-block;
+      color: white;
+      background: #cb0000;
     }
   }
 
@@ -610,6 +633,9 @@
       width: 100vw;
       right: 0;
       left: 50%;
+      transform: translateX(-50%) scale(1.001);
+    }
+    @include media-breakpoint-up(md) {
       transform: translateX(-50%);
     }
   }
@@ -637,5 +663,20 @@
     &:hover {
       text-decoration: none;
     }
+  }
+}
+
+@keyframes pulsing {
+  0% {
+    transform: scale(.95);
+    box-shadow: 0 0 0 0 rgba($color-red, .8);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba($color-red, 0);
+  }
+  100% {
+    transform: scale(.95);
+    box-shadow: 0 0 0 0 rgba($color-red, 0);
   }
 }

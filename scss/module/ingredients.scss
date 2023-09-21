@@ -90,7 +90,7 @@
         width: 100vw;
         right: 0;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%) scale(1.001);
       }
       @include media-breakpoint-up(sm) {
         height: 140px;
@@ -98,6 +98,7 @@
       @include media-breakpoint-up(md) {
         height: 240px;
         background-position: center center;
+        transform: translateX(-50%);
       }
       @include media-breakpoint-up(lg) {
         height: 355px;
