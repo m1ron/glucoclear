@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     initAffiliate();
     initUpsell();
     initPopup();
-    initLocation();
+    //initLocation();
 });
 
 function initHeader() {
