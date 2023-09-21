@@ -19,30 +19,4 @@
       padding-bottom: 85px;
     }
   }
-
-  &--blank {
-    padding-top: 0;
-
-    > .container {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-  }
-
-  &--landing {
-    > .container {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-  }
-
-  &--blue {
-    background: $color-navy;
-  }
-}
-
-.firstload {
-  .pricing, .guarantee, .bonus, .free-shipping, .reviews, .guarantee, .faq {
-    display: none;
-  }
 }

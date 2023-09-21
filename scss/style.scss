@@ -7,24 +7,5 @@
         'base/default',
         'base/form';
 
-@import 'layout/header',
-        'layout/page',
-        'layout/footer';
-
-@import 'module/index',
-        'module/science',
-        'module/product',
-        'module/ingredients',
-        'module/badges',
-        'module/bonus',
-        'module/free-shipping',
-        'module/reviews',
-        'module/pricing',
-        'module/guarantee',
-        'module/faq',
-        'module/references',
-        'module/video',
-        'module/label',
-        'module/page-heading',
-        'module/article',
-        'module/popup';
+@import 'module/page',
+        'module/app';
