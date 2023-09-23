@@ -24,6 +24,9 @@ body {
   color: black;
   background: white;
   -webkit-font-smoothing: antialiased;
+  &.gray {
+    background: #f4f4f4;
+  }
 }
 
 p {
