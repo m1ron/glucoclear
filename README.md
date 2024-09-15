@@ -1,8 +1,8 @@
-# GLUCOCLEAR
-Landing page markup
+## Glucoclear
+HTML/SCSS markup for Glucoclear landing page
 
-# Installation
+#### Installation
 > npm install
 
-# Dev Mode
+#### Dev Mode
 > gulp
